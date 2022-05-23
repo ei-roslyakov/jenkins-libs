@@ -6,7 +6,6 @@ def call (Map config = [:]) {
         )
     ]) {
         withEnv(["GIT_SSH_COMMAND=ssh -o StrictHostKeyChecking=no -i ${SSH_KEY}"]) {
-            sh 'git clone --single-branch -b develop git@github.com:Sphere-Research/sphere-devops.git'
             if ("${config.path}") {
                 dir("config.path") {
                     sh "git clone --single-branch -b ${config.branch} ${config.repo}"
