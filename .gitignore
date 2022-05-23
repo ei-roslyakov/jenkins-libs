@@ -1,0 +1,6 @@
+#IDEs
+**/.vscode
+**/.idea
+**/.DS_Store
+**/.terraform
+temp.jenkinsfile
